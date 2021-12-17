@@ -41,8 +41,6 @@ int main()
 
 
     // MULTI THREAD:
-    int numThreads = 8;
-    omp_set_num_threads(numThreads);
     sum = (f(A) + f(B)) / 2.;
     double multiThreadStartTime = clock();
 
