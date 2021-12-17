@@ -44,7 +44,7 @@ int main()
     sum = (f(A) + f(B)) / 2.;
     double multiThreadStartTime = clock();
 
-#pragma omp parallel for default(none), shared(dx), reduction(+:sum)
+#pragma omp parallel for default(none), shared(A, dx, numSubdivisions), reduction(+:sum)
     for (int i = 1; i < numSubdivisions - 1; i++)
     {
         double x = A + dx * (float)i;
